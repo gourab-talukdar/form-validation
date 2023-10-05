@@ -10,8 +10,7 @@ This is a simple example of how to perform form validation using JavaScript in a
 ## Getting Started
 
 1. Clone this repository to your local machine using the following command:
-
-git clone https://github.com/gourab-talukdar/form-validation.git
+- git clone https://github.com/gourab-talukdar/form-validation.git
 
 ## Usage
 
