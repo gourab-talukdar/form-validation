@@ -1,0 +1,288 @@
+:root{
+	--primary-color: #fc6767;
+	--secondary-color: #ec008c;
+	--danger: #e74c3c;
+	--success: #2ecc71;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html{
+	font-size: 10px;
+}
+body,input{
+	font-family: "Roboto", sans-serif;
+}
+/*-------------------------------------------------main style start here*/
+body{
+	min-height: 100vh;
+	width: 100vw;
+	background-color: rgba(218, 34, 255, 0.1);
+	position: relative;
+}
+
+.container{
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/*----------------------------------------------------------- sign up style start here
+      -------------------------------------------------------------------------------- --*/
+.form-container{
+	background-color: #fff;
+	width: 100%;
+	max-width: 40rem;
+	min-height: 40rem;
+	padding: 8rem 4rem 3rem;
+	box-shadow: 0px 1px 1.5em rgba(0, 0, 0, 0.1);
+	border-radius: .5rem;
+	position: relative;
+	overflow: hidden;
+}
+/*-- -----------------------------------------sign up color background style --*/
+.form-bg{
+	background: linear-gradient(to left, var(--primary-color), var(--secondary-color));
+	height: 60rem;
+	width: 180%;
+	position: absolute;
+	top: 25%;
+	left: 50%;
+	transform: translate(-50%, -100%) rotate(-15deg);
+	z-index: 10;
+	border-radius: 50%;
+	transition: all 3s ease;
+}
+
+/*-- ------------------------------- sign up form heading style start here --*/
+.sign-up-form-heading{
+	position: absolute;
+	top: 4rem;
+	left: 8rem;
+	color: #fff;
+	font-size: 2.2rem;
+	letter-spacing: .1rem;
+	font-weight: bold;
+	z-index: 12;
+}
+/*---------------------------------- sign-up form body style start here --*/
+form#sign-up-form{
+	padding-top: 2rem;
+	margin-top: 3rem;
+	position: relative;
+}
+/*------------------------------- input fields style start here --*/
+.input-group{
+	width: 95%;
+	margin: 0 auto;
+	display: flex;
+	align-items: baseline;
+	margin-top: 1.8rem;
+	position: relative;
+}
+.input-group input{
+	position: relative;
+	width: 100%;
+	padding: 1rem 0;
+	border: none;
+	outline: none;
+	font-size: 1.6rem;
+	background: transparent;
+	color: var(--primary-color);
+}
+.input-group i:first-child{
+	font-size: 1.8rem;
+	margin-right: 1rem;
+	color: var(--primary-color);
+}
+.input-group i.fa-check-circle,
+.input-group i.fa-exclamation-circle{
+	position: absolute;
+	top: 50%;
+	right: .5rem;
+	transform: translateY(-50%);
+	font-size: 1.8rem;	
+	visibility: hidden;
+} 
+/*----when error occured, this will execute*/
+.input-group.error i.fa-exclamation-circle{
+	color: var(--danger);
+	visibility: visible;
+}
+/*----when success, this will execute*/
+.input-group.success i.fa-check-circle{
+	color: var(--success);
+	visibility: visible;
+}
+/*--------error msg style*/
+.input-group small{
+	position: absolute;
+	top: 100%;
+	left: 2.5rem;
+	font-size: 1.4rem;
+	color: var(--danger);
+	width: 100%;
+	margin-top: .4rem;
+	visibility: hidden;
+}
+/*----when error occured, this will execute*/
+.input-group.error small{
+	visibility: visible;
+}
+
+/*-------------------------------input field's border-bottom type design style */
+.input-group .bar{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.1);
+	height: 1px;
+}
+.input-group .bar::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0%;
+	height: 2px;
+	background: var(--primary-color);
+	transition: width .3s ease;
+}
+.input-group input:focus + .bar:before{
+	width: 100%;
+}
+/*------------------------------------- REGISTER button style start here --*/
+form input[type="submit"]{
+	border: none;
+	outline: none;
+	font-size: 1.6rem;
+	letter-spacing: .1rem;
+	text-transform: uppercase;
+	background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+	padding: 1rem 4rem;
+	border-radius: 2rem;
+	color: #fff;
+	display: block;
+	margin: 4rem auto 3rem;
+	cursor: pointer;
+	transition: all .3s ease;
+}
+form input[type="submit"]:focus,
+form input[type="submit"]:hover{
+	background: linear-gradient(to left, var(--primary-color), var(--secondary-color));
+}
+
+
+/*-- -----------------------------------asking for (log in) style start here --*/
+.ask-login{
+	text-align: center;
+}
+.ask-login a{
+	text-decoration: none;
+	color: #a1a1a1;
+	font-size: 1.4rem;
+}
+.ask-login a span{
+	color: var(--primary-color);
+	position: relative;
+	transition: all .3s ease;
+}
+.ask-login a span::after{
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+	height: 2px;
+	width: 0%;
+	background:linear-gradient(to left, var(--primary-color), var(--secondary-color));
+	transition: width .3s ease;
+}
+.ask-login a span:hover:after{
+	width: 100%;
+}
+
+
+/*---------------------------------- login form body style start here --
+----------------------------------------------------------------*/
+form#login-form{
+	padding-top: 2rem;
+	margin-top: 3rem;
+	width: 90%;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+/*-- ------------------------------- login form heading style start here --*/
+.login-form-heading{
+	position: absolute;
+	bottom: 3rem;
+	right: 10rem;
+	color: #fff;
+	font-size: 2.2rem;
+	letter-spacing: .1rem;
+	font-weight: bold;
+	z-index: 12;
+}
+
+
+/*-----------------------------------------------utility classes
+----------------------------------------------------------*/
+.form-bg-move{
+	top: 200%;
+}
+.no-display{
+	display: none;
+}
+.invisible{
+	visibility: hidden;
+}
+.neg-z-index{
+	z-index: -1;
+}
+
+ /*-----------------------------------sign up successfull pop up sms 
+          -----------------------------------------------------------*/
+#pop-up{
+	background: #fff;
+	box-shadow: 0px 1px 1.5rem rgba(0, 0, 0, 0.1);
+	border-radius: .5rem;
+	padding: 2rem 1.5rem;
+	text-align: center;
+	max-width: 35rem;
+	position: absolute;
+	z-index: 15;
+}     
+#pop-up i{
+	display: block;
+	font-size: 4.5rem;
+	text-align: center;
+	color: var(--success);
+}
+#pop-up h3{
+	font-size: 2rem;
+	margin: 1rem 0;
+	color: var(--success);
+}
+#pop-up h2{
+	font-size: 2.4rem;
+	letter-spacing: .1rem;
+}
+#pop-up p{
+	font-size: 1.5rem;
+	margin: 1.5rem 0;
+	color: #808080;
+}
+
+
+/*------------------------------------------responsive style here
+-----------------------------------------------------*/
+@media screen and (max-width: 450px){
+	.container{
+		padding: 0 2rem;
+	}
+}

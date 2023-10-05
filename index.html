@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="./fontawesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    
+    <title>Form Validation</title>
+</head>
+<body>
+      <div class="container">
+        <div class="form-container">
+           <!-- -----------------------------------------sign up color background html -->
+          <div class="form-bg"></div>
+          <!-- -------------------------------sign -up - form heading html start here -->
+          <span class="sign-up-form-heading">Sign Up</span>
+          <!---------------------------------- sign up form body html start here -->
+            <form id="sign-up-form">
+                <!-------------------------------- input fields html start here -->
+                <div class="input-group">
+                  <i class="fas fa-user"></i>
+                  <input type="text" name="" placeholder="Username" id="username" autocomplete="off">
+                   <span class="bar"></span>
+                  <i class="fas fa-check-circle"></i>
+                  <i class="fas fa-exclamation-circle"></i>
+                  <small></small>
+                </div>
+                <div class="input-group">
+                  <i class="fas fa-envelope"></i>
+                  <input type="text" name="" placeholder="Email" id="email" autocomplete="off">
+                  <span class="bar"></span>
+                  <i class="fas fa-check-circle"></i>
+                  <i class="fas fa-exclamation-circle"></i>
+                  <small></small>
+                </div>
+                <div class="input-group">
+                  <i class="fas fa-lock"></i>
+                  <input type="password" name="" placeholder="Password" id="password" autocomplete="off">
+                  <span class="bar"></span>
+                  <i class="fas fa-check-circle"></i>
+                  <i class="fas fa-exclamation-circle"></i>
+                  <small></small>
+                </div>
+                <div class="input-group">
+                  <i class="fas fa-lock"></i>
+                  <input type="password" name="" placeholder="Confirm Password" id="cpassword" autocomplete="off">
+                  <span class="bar"></span>
+                  <i class="fas fa-check-circle"></i>
+                  <i class="fas fa-exclamation-circle"></i>
+                  <small></small>
+                </div>
+
+                <!------------------------------------- sign up button html start here -->
+                <input type="submit" name="" value="Register">
+                <!-- -----------------------------------asking for (log in) html start here -->
+                <div class="ask-login">
+                    <a href="#">Already have an account? <span id="ask-login">Log in</span></a>
+                </div>
+            </form>
+
+             <!---------------------------------- login form body html start here 
+              --------------------------------------------------------------------------->
+
+              <!-- -------------------------------login- form heading html start here -->
+             <span class="login-form-heading neg-z-index">Login</span>
+              <!---------------------------------- login form body html start here -->
+             <form id='login-form' class="no-display">
+                  <!-------------------------------- input fields html start here -->
+                <div class="input-group">
+                  <i class="fas fa-user"></i>
+                  <input type="text" name="" placeholder="Username" id="usernam" autocomplete="off">
+                   <span class="bar"></span>
+                  <i class="fas fa-check-circle"></i>
+                  <i class="fas fa-exclamation-circle"></i>
+                  <small>this is an error</small>
+                </div>
+                <div class="input-group">
+                  <i class="fas fa-lock"></i>
+                  <input type="password" name="" placeholder="Password" id="passwor" autocomplete="off">
+                  <span class="bar"></span>
+                  <i class="fas fa-check-circle"></i>
+                  <i class="fas fa-exclamation-circle"></i>
+                  <small>this is an error</small>
+                </div>
+                <!------------------------------------- login button html start here -->
+                <input type="submit" name="" value="login">
+                <!-- -----------------------------------asking for (sign up) html start here -->
+                <div class="ask-login">
+                    <a href="#">Don't have an account? <span id="ask-sign-up">sign-up</span></a>
+                </div>
+             </form>
+        </div>
+
+        <!-- -----------------------------------sign up successfull pop up sms 
+          ----------------------------------------------------------->
+          <div id="pop-up" class="no-display">
+            <i class="fas fa-check-circle"></i>
+            <h3>Success...</h3>
+            <h2>Welcome, <span></span>!</h2>
+            <p>Congratulations! You have successfully registered.</p>
+            <div class="ask-login">
+                    <a href="#">Click here to <span id="ask-login-pop-up">Log in</span></a>
+            </div>
+          </div>
+      
+      </div>
+
+      <script src="./js/main.js"></script> 
+</body>
+</html>
+
+
+
+
